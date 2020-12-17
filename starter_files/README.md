@@ -14,11 +14,11 @@ Steps followed in this project are:
 <img src="./Screenshots/architecture.PNG" />
 
 ## Key Steps
-**Step 1. Authentication:**
+### Step 1. Authentication:
 
 A service principal needs to be created here. As I used Udacity lab, this was already taken care of.
 
-**Step 2. Auto ML Experiment:**
+### Step 2. Auto ML Experiment:
 
 Firstly the dataset must be uploaded onto the platform. 
 
@@ -34,14 +34,14 @@ VotingEnsemble model turned out to be the best one as it takes output of various
 <img src="./Screenshots/AutoML-run.png" />
 <img src="./Screenshots/best-model.png" />
 
-**Step 3. Deploy the best model:**
+### Step 3. Deploy the best model:
 
 The best model is then deployed as a REST endpoint using Azure Container Instance(ACI) with Authentication enabled.
 
 <img src="./Screenshots/deploy-model.png" />
 <img src="./Screenshots/deployed.png" />
 
-**Step 4. Enable Logging:**
+### Step 4. Enable Logging:
 
 The python logs.py script was used to turn on the Application insights for deployed endpoint and to retrieve the logs.
 
@@ -49,7 +49,7 @@ The python logs.py script was used to turn on the Application insights for deplo
 <img src="./Screenshots/logs-2.png" />
 <img src="./Screenshots/application-insight-enabled-true.png" />
 
-**Step 5. Swagger Documentation:**
+### Step 5. Swagger Documentation:
 
 In this step a swagger ui docker container is deployed to view swagger documentation for the endpoint. First the swagger.json file is downloaded. The python file serve.py and swagger.sh is used to listen on port 8000. Later the GET and POST request can also be seen on the Swagger UI.  
 
@@ -59,7 +59,7 @@ In this step a swagger ui docker container is deployed to view swagger documenta
 <img src="./Screenshots/swagger-4.png" />
 <img src="./Screenshots/swagger-5.png" />
 
-**Step 6. Consume Model Endpoints:**
+### Step 6. Consume Model Endpoints:
 
 As the model is now deployed, we can interact with the trained model. The endpoint.py file is used to show that the endpoint is consumed. 
 
@@ -70,7 +70,7 @@ The benchmark.sh file was used against the endpoint to see if any request failed
 <img src="./Screenshots/benchmark-1.png" />
 <img src="./Screenshots/benchmark-2.png" />
 
-**Step 7 - Create and Publish a Pipeline:**
+### Step 7 - Create and Publish a Pipeline:
 
 In this step the azure pipeline is created to train the model and expose it to an endpoint. Jupyter notebook was used for AutoML run after providing config.json file.
 The pipeline is then published and consumed.
@@ -81,4 +81,4 @@ The pipeline is then published and consumed.
 <img src="./Screenshots/pipeline-jupyter.png" />
 
 ## Screen Recording
-*TODO* Provide a link to a screen recording of the project in action. Remember that the screencast should demonstrate:
+Link to the screen recording of the project in action: [Video Link](https://www.youtube.com/watch?v=k0mP7QpODu4)
